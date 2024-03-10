@@ -1,0 +1,21 @@
+{
+  "name": "tsuki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/app.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
+  }
+}
