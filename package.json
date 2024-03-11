@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/app.ts\""
+    "dev": "nodemon"
   },
   "keywords": [],
-  "author": "",
+  "author": "vinandra",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^20.11.25",
     "tslib": "^2.6.2",

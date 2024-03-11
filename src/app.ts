@@ -1,7 +1,26 @@
+import readline from "readline";
 import fs from "fs";
+import { contacts } from "lib/types";
 
-// fs.writeFileSync("posts/test.txt", "anjay keren menyala abang ku ilmu padi abang ku");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-const data = fs.readFileSync("posts/test.txt", "utf-8");
+rl.question("masukan nama ada : ", (nama) => {
+  rl.question("masukan nomor Hp : ", (noHp) => {
+    const nomorHp: number = parseInt(noHp);
+    const contact: contacts = {
+      nama,
+      nomorHp,
+    };
+    const file = fs.readFileSync("data/contacts.json", "utf-8");
+    const contacts = JSON.parse(file);
+    contacts.push(contact);
 
-console.log(data);
+    fs.writeFileSync("data/contacts.json", JSON.stringify(contacts));
+    console.log(contacts);
+
+    rl.close();
+  });
+});
